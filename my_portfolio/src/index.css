@@ -205,20 +205,6 @@ p {
   box-shadow: inset 0 0 30px rgba(30, 27, 75, 0.2);
 }
 
-.skill-track {
-  height: 3px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(148, 163, 184, 0.14);
-}
-
-.skill-fill {
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #a855f7, #ec4899);
-  box-shadow: 0 0 18px rgba(168, 85, 247, 0.34);
-}
-
 .contact-panel {
   border: 1px solid var(--border);
   border-radius: var(--radius-card);

@@ -2,17 +2,18 @@ import { motion, useReducedMotion } from 'framer-motion';
 import ScrollAnimation from './ScrollAnimation';
 
 const skills = [
-  { name: 'HTML', level: 95 },
-  { name: 'CSS', level: 90 },
-  { name: 'Tailwind CSS', level: 90 },
-  { name: 'JavaScript', level: 90 },
-  { name: 'React.js', level: 85 },
-  { name: 'Node.js', level: 80 },
-  { name: 'Express.js', level: 80 },
-  { name: 'MongoDB', level: 75 },
+  'HTML',
+  'CSS',
+  'Tailwind CSS',
+  'JavaScript',
+  'React.js',
+  'Node.js',
+  'Express.js',
+  'MongoDB',
+  'PostgreSQL',
 ];
 
-const tools = ['Git', 'GitHub', 'VS Code', 'Vite'];
+const tools = ['Git', 'GitHub', 'VS Code', 'Vite', 'Vercel Hosting', 'Cloudflare', 'Supabase'];
 
 const Skills = () => {
   const reduceMotion = useReducedMotion();
@@ -31,29 +32,19 @@ const Skills = () => {
           <ScrollAnimation direction="left">
             <div className="surface-card h-full p-6 sm:p-8">
               <h3 className="mb-8 text-2xl font-bold tracking-tight text-white">Technical Skills</h3>
-              <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {skills.map((skill, index) => (
                   <motion.div
-                    key={skill.name}
-                    className="space-y-3"
+                    key={skill}
+                    className="interactive-surface flex min-h-16 items-center gap-3 rounded-xl border border-gray-600/50 bg-gray-950/25 px-4 py-3"
                     initial={reduceMotion ? false : { opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={reduceMotion ? undefined : { y: -3 }}
                     viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.45, delay: reduceMotion ? 0 : index * 0.04 }}
                   >
-                    <div className="flex justify-between gap-4 text-sm text-gray-300">
-                      <span className="font-semibold">{skill.name}</span>
-                      <span className="text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="skill-track" aria-hidden="true">
-                      <motion.div
-                        className="skill-fill"
-                        initial={reduceMotion ? { width: `${skill.level}%` } : { width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: reduceMotion ? 0 : 0.8, delay: reduceMotion ? 0 : index * 0.04 + 0.12 }}
-                      />
-                    </div>
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-purple-400 shadow-[0_0_10px_rgba(192,132,252,0.55)]" aria-hidden="true"></span>
+                    <span className="font-semibold text-gray-200">{skill}</span>
                   </motion.div>
                 ))}
               </div>
