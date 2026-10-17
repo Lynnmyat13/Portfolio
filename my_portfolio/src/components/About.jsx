@@ -1,10 +1,10 @@
 import ScrollAnimation from './ScrollAnimation';
 
 const stats = [
-  { icon: 'cube', value: '3+', label: 'Projects Completed', tone: 'text-fuchsia-300' },
-  { icon: 'graduate', value: '1', label: 'Year Learning', tone: 'text-blue-300' },
-  { icon: 'code', value: '8', label: 'Technologies Used', tone: 'text-fuchsia-300' },
-  { icon: 'users', value: '4', label: 'Major Projects', tone: 'text-blue-300' },
+  { icon: 'cube', value: '3', label: 'Full-Stack Projects', tone: 'text-fuchsia-300' },
+  { icon: 'graduate', value: '3', label: 'Years in Computing', tone: 'text-blue-300' },
+  { icon: 'code', value: '16', label: 'Skills & Tools', tone: 'text-fuchsia-300' },
+  { icon: 'award', value: '3', label: 'Qualifications', tone: 'text-blue-300' },
 ];
 
 const facts = [
@@ -25,7 +25,7 @@ const Icon = ({ name, className = 'h-6 w-6' }) => {
     cube: <><path d="m12 2 8 4.5v10L12 21l-8-4.5v-10L12 2Z" /><path d="m4 6.5 8 4.5 8-4.5M12 11v10" /></>,
     graduate: <><path d="m2 9 10-5 10 5-10 5L2 9Z" /><path d="M6 11.5V16c3.6 2.7 8.4 2.7 12 0v-4.5" /></>,
     code: <><path d="m8 6-5 6 5 6M16 6l5 6-5 6M14 3l-4 18" /></>,
-    users: <><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2" /><path d="M3 20c.5-4 2.5-6 6-6s5.5 2 6 6M15 15c3.4-.4 5.4 1.3 6 4" /></>,
+    award: <><circle cx="12" cy="8" r="5" /><path d="m8.5 12-1 9 4.5-3 4.5 3-1-9" /><path d="m10 8 1.3 1.3L14 6.5" /></>,
     download: <><path d="M12 3v12m0 0 4-4m-4 4-4-4" /><path d="M5 19h14" /></>,
     external: <><path d="M14 4h6v6M20 4l-9 9" /><path d="M18 13v6H5V6h6" /></>,
   };
